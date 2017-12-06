@@ -1,0 +1,404 @@
+﻿\subsection{I am not yet sure if I want to include Spin-orbit coupling...}
+The Dirac's theory of electron provides us with the existence of the spin degree of freedom and of the magnetic moment associated with it. The raio of the spin magnetic moment in Bohr units to the spin angular momentum in units of $\hbar$ for a free electron has a value of $g_s=2$, and is called the g-factor. However, this is only true at non-relativistic cases. For a free particle with $v$ comparable to the speed of light, the relativistic energy $E=\sqrt{m^2c^4+c^2p^2}$ splits up in the presence of an external magnetic field $\bm{\mathcal{H}}$. According to the Dirac equation, the splitting is given by-
+
+\be
+\delta E = (e\hbar c\bm{\mathcal{H}}\cdot\mathbf{\sigma})/2E
+\ee
+
+Here, $\mathbf{\sigma}$ is the Pauli spin operator with the following components:
+
+\be
+\sigma_x = \left({\begin{array}{cc}
+0 & 1 \\
+1 & 0 \\
+\end{array} } \right),
+\quad
+\sigma_y = \left({\begin{array}{cc}
+0 & -i \\
+i & 0 \\
+\end{array} } \right),
+\quad
+\sigma_z = \left({\begin{array}{cc}
+1 & 0 \\
+0 & -1 \\
+\end{array} } \right)
+\ee
+
+The decrease in the magnetic moment arises from the relativistic increase in the mass. Therefore, the value of the $g_s$ also changes. In a solid, the g-factor can be very different from $g_s$ due to spin-orbit interactions. Spin-orbit interaction is in effect a relativistic correction for reducing the Dirac equation to the nonrelativistic limit.
+
+According to Pauli model of spinning electrons, the intrinsic spin magnetic moment is given by:
+
+\be
+\mathbf{s} = (g_s/2)\beta\mathbf{\sigma}
+\ee
+
+where $\beta=e\hbar/2mc$ is the Bohr magneton.
+The spin-orbit interaction is the interaction of the spin moment with the external magnetic field which is the result of the relative motion of the other charges. An electric field $\mathbf{E}$ in the reference frame of the nucleus results in a magnetic field $\bm{\mathcal{H}}=(1/mc)\mathbf{E}\times\mathbf{p}$ in the frame of a moving electron.The Hamiltonian of an atom including all these interactions except the spin-spin interactions is
+
+\be\begin{split}
+H=\sum_i\frac{p_i^2}{2m} - \sum_i\frac{Ze^2}{r_i} + \sum_{{i,j}_{i\neq j}}\frac{e^2}{r_{ij}} + \sum_i\frac{\hbar}{4m^2c^2}\frac{Ze^2}{r_i^3}\mathbf{r}_i\times\mathbf{p}_i\cdot\mathbf{\sigma}_i \\
+-\sum_{{i,j}_{i\neq j}}\frac{e^2\hbar}{2m^2c^2}\frac{\mathbf{r}_{ij}}{r_{ij}^3}\times(\mathbf{p}_i-\mathbf{p}_j)\cdot\mathbf{\sigma}_i + \sum_{{i,j}_{i\neq j}}\frac{e^2\hbar}{4m^2c^2} \frac{\mathbf{r}_{ij}}{r_{ij}^3}\times\mathbf{p}_i\cdot\mathbf{\sigma}_i
+\end{split}
+\ee
+
+
+
+\subsection{probably unnecessary}
+The Hamiltonian with the field $\bm{\mathcal{H}}=\mathbf{\nabla}\times\mathbf{A}$ is:
+
+\be
+H = \frac{1}{2m}\left(\mathbf{p}+\frac{e\mathbf{A}}{c}\right)^2 + V + \frac{\hbar}{4m^2c^2}\mathbf{\sigma}\cdot\mathbf{\nabla} V \times \left(\mathbf{p}+\frac{e\mathbf{A}}{c}\right) + g_s \frac{\beta}{2}\bm{\mathcal{H}}\cdot\mathbf{\sigma}
+\ee
+
+
+Luttinger and Kohn suggested the introduction of functions $\chi_{m,k,\rho}=exp(i\mathbf{k}\cdot\mathbf{r})\psi_{m,k_0,\rho}(\mathbf{r})$ as a basis for the so-called L-K representation. Here, $k_0$ is the location of the energy minimum of the band of interest $n$, the $\psi_{m,k_0,\rho}$ are the Bloch functions of the Hamiltonian at $\mathbf{k_0}$, $\mathbf{k}$ is measured from $\mathbf{k}_0$. It is important to notice that $\chi_{m,k,\rho}$ only depends on the wave vector $\mathbf{k}$ through the term $exp (i\mathbf{k}\cdot\mathbf{r})$.
+
+The matrix elements of the momentum and coordinate take the simple forms:
+
+\be
+\left(\chi_{n,k,\rho},\pi\chi_{m,k',\rho '}\right) = (1-\delta_{nm})\pi_{n\rho;m\rho '}\delta(\mathbf{k}-\mathbf{k'}) + \hbar \mathbf{k}\delta_{nm}\delta_{\rho\rho '}\delta(\mathbf{k}-\mathbf{k'})
+\ee
+\be
+\left(\chi_{n,k,\rho},\mathbf{x}\chi_{m,k',\rho '}\right) = \delta_{nm}\delta{\rho\rho '}i\mathbf{\nabla}_k \delta(\mathbf{k}-\mathbf{k'})
+\ee
+
+The representative Hamiltonian in the L-K functions can be written in the following matrix operator form:
+
+\be
+H_{m\rho; m'\rho '}(\mathbf{\bar{k}}) = \left[E_m+\frac{\hbar^2}{2m}\sum_\alpha \mathbf{\bar{k}}_\alpha^2 \right] + g_s \frac{\beta}{2} H \sum_\alpha\lambda_\alpha\sigma^\alpha_{m\rho; m'\rho '} + \frac{\hbar}{m}\sum_\alpha\pi^\alpha_{m\rho;m'\rho '}\mathbf{\bar{k}}_\alpha
+\ee
+
+where the $E_m$ are the band energies at $\mathbf{k_0}$, the $\alpha$s are Cartesian coordinates, and the $\lambda_\alpha$ are the direction cosines of $\mathbf{H}$. The Hamintonian operator depends on the vector potential only through $\mathbf{\bar{k}}$. As the energies are only negligibly affected by the field, the order of magnitude of $\mathbf{\bar{k}}$ is the same as that of $k$ to which it reduces in the absence of the field. 
+After eliminating the first order interband matrix elements by a unitary transformation $e^S$, with
+
+\be
+S_{n\rho; m\rho '} = - \frac{\hbar}{m(E_n-E_m)}\mathbf{\pi}_{n\rho; m\rho '}\cdot\mathbf{\bar{k}}
+\ee
+the effective mass Hamiltonian is obtained:
+\be
+[Hamiltonian]
+\ee
+\\
+
+
+%Fermi Liquid
+Now, we switch our attention to Fermi liquid systems. We will describe the system in terms of weakly interacting quasi-particles. We define the distribution function, $n_\mathbf{p}(\mathbf{r})$ as the density of quasi-particles at position $\mathbf{r}$ with momentum $\mathbf{p}$. At equilibrium,
+\be
+n_0 = n( \epsilon_p + U(x) - \mu)
+\ee
+where $\mu$ is the chemical potential. The Boltzmann equation,
+\be
+\partial_t n + \dot{p} \partial_p n + \dot{x} \partial_x n = 0
+\ee
+with,
+%
+\be
+\dot{p} = - \frac{\partial U(x) }{ \partial x }\, , \quad
+\dot{x} = v_p
+\ee
+
+We select a specific form of the distribution fuction, that is periodic in time:
+\be
+n= n_0(\epsilon_{p + p_0 e^{i\omega t}} + U(x + x_0 e^{i\omega t}) - \mu )
+\ee
+which can be expanded into the following form:
+\be
+n=n_0 + \delta n\, ,\quad  
+\delta n  = \partial_{\epsilon} n_0 \frac{\partial \epsilon(p)}{\partial p}  p_0 e^{i\omega t} + 
+\partial_{\epsilon} n_0 \frac{\partial U(x)}{\partial x } x_0 e^{i\omega t}
+= 
+\partial_{\epsilon} n_0 \left[ \frac{\partial \epsilon(p)}{\partial p}  p_0 e^{i\omega t}  +  \frac{\partial U(x)}{\partial x } x_0 e^{i\omega t} \right]
+\ee
+With this notation, we can write our single particle Hamiltonian:
+\be
+H(p,x) = \epsilon_p + U(x)
+\ee
+we can also write it as
+\be
+\delta n
+= 
+\partial_{\epsilon} n_0 \left[ \frac{\partial H}{\partial p}  p_0 e^{i\omega t}  +  \frac{\partial H}{\partial x } x_0 e^{i\omega t} \right]
+\ee
+
+With these choices, the Boltzmann equation can be rewritten to yield the following relations for the coefficients of $-\partial_x U(x)$ and $\partial \epsilon/ \partial p$ respectively:
+\begin{align}
+\left( - \frac{\partial U}{ \partial x } \right) 
+\left[ \frac{1}{m} p_0 - x_0 (i \omega) \right] & = 0
+\notag \\
+\left( \frac{ \partial \epsilon }{ \partial p } \right) 
+\left[ k x_0 + p_0 ( i \omega ) \right] & = 0
+\end{align}
+These relations can only be satisfied if both the derivatives are constants of the system, which means:
+\begin{align}
+\frac{\partial^2 U(x) }{\partial x^2 }  = k \, , \quad
+\frac{\partial^2 \epsilon }{ \partial p^2}=  \frac{ \partial v_p }{ \partial p} = \frac{1}{m}
+\end{align}
+The system of equation will have a solution if
+\be
+\omega^2 = k/m
+\ee
+which is precisely the sloshing mode frequency.
+\subsection{Fermi surface deformation approach}
+Write
+\be\label{dn1}
+\delta n = \partial_{\epsilon} n_0 
+\left( a_{\omega} x e^{i \omega t}  + b_{\omega}e^{i \omega t} \cos \theta \right)
+\ee
+with $\cos \theta = p_x/ p_F$.
+The spacial and momentum derivative only act on the part proportional to $a$ and $b$ as any function of energy such as $\partial_{\epsilon} n_0$ would satisfy the stationary equation and drop.
+\be
+\partial_x \delta n = \partial_{\epsilon} n_0 
+\left( a_{\omega}  e^{i \omega t} \right)
+\ee
+and then
+\be
+\dot{x} \partial_x \delta n = \partial_{\epsilon} n_0 v_F \cos \theta
+\left( a_{\omega}  e^{i \omega t} \right)
+\ee
+Then the second piece is
+\be
+\partial_p \delta n = 
+\partial_{\epsilon} n_0 
+\left( b_{\omega}e^{i \omega t} \frac{1}{p_F} \right)
+\ee
+and then with $\dot{p} = - k x$ as a force,
+\be
+\dot{p} \partial_p \delta n = 
+(- k x) \partial_{\epsilon} n_0 
+\left( b_{\omega}e^{i \omega t} \frac{1}{p_F} \right)\, .
+\ee
+The kinetic equation then after canceling $e^{i \omega t}$ and $\partial_{\epsilon} n $ becomes 
+\be
+i \omega \left( a_{\omega} x   + b_{\omega} \cos \theta \right)
++
+v_F \cos \theta
+\left( a_{\omega}  \right)
++
+(- k x)
+\left( b_{\omega}\frac{1}{p_F} \right)
+= 0
+\ee
+And then
+\begin{align}
+i \omega  a_{\omega} - k  b_{\omega}\frac{1}{p_F} & = 0 \notag \\
+i \omega  b_{\omega} + v_F a_{\omega} & = 0 
+\end{align}
+and the condition is 
+\be
+\det \begin{bmatrix}
+i \omega  & - k / p_F \\
+v_F & i \omega 
+\end{bmatrix}
+=0\, , \quad \Rightarrow \omega^2 = k/m \quad with \quad  1/m = (1/p_F) v_F\, , \quad v_F = \partial_{p} \epsilon \, , p=p_F
+\ee
+\subsection{Fermi liquid}
+The kinetic equation includes the gradients of
+\be
+\tilde{\epsilon}_p = \epsilon_p + \sum_{p'} f_{pp'} \delta n_{p'}
+\ee
+The kinetic equation then reads
+\be
+\frac{ \partial n_p }{ \partial t } + \partial_r n_p \partial_p \tilde{\epsilon}_p - \partial_{p} n_p \partial_r \tilde{\epsilon}_p = I_{coll} 
+\ee
+Write 
+\be
+n_p = n_0 + \delta n
+\ee
+with $\delta n $ in the form \eqref{dn1}.
+Linearization gives,
+\begin{align}
+\frac{\partial \delta n }{\partial t} &+ \partial_r \delta n \partial_p \epsilon_p 
++
+\partial_r  n_0 \partial_p \sum_{p'} f_{pp'} \delta n_{p'}
+\notag \\
+& 
+- \partial_p \delta n \partial_r \epsilon
+- \partial_p n_0 \partial_r  \sum_{p'} f_{pp'} \delta n_{p'} 
+\end{align}
+%
+\begin{align}
+\partial_x n_0 = \partial_{\epsilon} n_0 \frac{\partial \epsilon_p}{ \partial x }
+&,\,\,\,\,  \partial_{p}  \sum_{p'} f_{pp'} \delta n_{p'} = 
+- F_1 \frac{b_{\omega}}{p_F} e^{i \omega t}\\
+%
+\partial_p n_0  = \partial_{\epsilon} n_0 \frac{ \partial \epsilon_p }{ \partial p} =
+\partial_{\epsilon} n_0 v_{p}\, &, \,\,\,\,
+\partial_{x} \sum_{p'} f_{pp'} \delta n_{p'} = 
+-F_0 a_{\omega}e^{i \omega t}
+\end{align}
+Where we have used the form \eqref{dn1}, and 
+\be
+\sum_{p'} f_{pp'} \delta n_{p'} = 
+\sum_{p'} f_{pp'} \partial_{\epsilon} n_0\left( a_{\omega} x e^{i \omega t}  + b_{\omega}e^{i \omega t} \cos \theta \right)
+=
+-F_0 x a_{\omega}e^{i \omega t} - F_1 b_{\omega} \cos \theta e^{i \omega t}
+\ee
+
+
+
+
+
+
+\begin{align}
+\partial_r \delta n & = \partial_{\epsilon} n_0  a_{\omega} e^{i \omega t}\, , \quad \partial_p \epsilon = v_p 
+\\
+\partial_p \delta n &= \partial_{\epsilon} n_0 \frac{b_{\omega} }{p_F}e^{i \omega t}\, ,\quad \partial_r \epsilon = \partial_x \epsilon
+\end{align}
+
+
+Then we get canceling $\partial_{\epsilon} n_0$ 
+\be
+i \omega ( a_{\omega} x + b_{\omega} \cos \theta ) + a_{\omega} v_p
+-
+\frac{ \partial \epsilon}{ \partial x}  (F_1) b_{\omega} \frac{ 1 }{ p_F} 
++
+v_p F_0 a_{\omega} - \frac{ \partial \epsilon}{ \partial x} b_{\omega} \frac{1}{p_F} = 0
+\ee
+The force is renormalized,
+\be\label{F_r}
+\partial_x \epsilon = \frac{ \partial_x U(x) }{ 1 + F_0} = \frac{ k x }{ 1 + F_0}
+\ee
+To see it consider the two neighboring points $x$ and $x + d x$, with Fermi momenta $p_F(x)$ and $p_F(x+dx)$, and require the equilibrium condition,
+\be
+v_F ( p_F(x+dx) - p_F(x) )(1 + F_0) + U(x+ d x) - U(x) = 0
+\ee
+which gives the relation,
+\be
+v_F \frac{ d p_F }{ d x} = - \frac{1}{ 1 + F_0} \partial_x U
+\ee
+The total energy changes when the particle is transferred from point $x$ to $x+dx$ is then,
+\be
+E(x+dx) - E(x) = U(x+dx) - U(x) + v_F  \frac{ d p_F }{ d x}  F_0
+\ee
+as a result, we recover \eqref{F_r}
+\be
+\partial_x E = \partial_x U + F_0 (- \frac{1}{ 1 + F_0}) \partial_x U
+=
+\frac{ \partial_x U}{ 1 + F_0 }
+\ee
+
+
+
+Linear in $x$ and constant in $\theta$ part gives
+\be
+i \omega a_{\omega} - b_{\omega} \frac{ k}{ 1 + F_0} \frac{ 1 + F_1 }{ p_F} = 0
+\ee
+The other constant in $x$ and linear in $\cos \theta$ part gives
+\be
+i \omega b_{\omega} + a_{\omega} v_F ( 1 + F_0) = 0 
+\ee
+The last two equations give the condition
+\be
+(i \omega)^2 \frac{ b_{\omega} }{ v_F ( 1 + F_0) }  + b_{\omega} \frac{ k}{ 1 + F_0} \frac{ 1 + F_1}{ p_F}  = 0
+\ee
+which gives
+\be\label{o_13}
+- \omega^2 + k \frac{ v_F}{ p_F} (1 + F_1) = 0
+\ee
+and with the effective mass defined as 
+\be\label{m_eff}
+\frac{1}{m^*} = \frac{v_F}{p_F}
+\ee
+we write \eqref{o_13} as 
+\be
+\omega^2 = \frac{k}{m^*}(1 + F_1) 
+\ee
+In Galilean invariant system
+\be\label{Galileo}
+\frac{m}{m^*} ( 1 + F_1) = 1
+\ee 
+and we are back to the solution,
+\be
+\omega^2 = k/m
+\ee
+
+\section{Spin}
+The electron energy in the absence of interactions,
+\be
+\delta \epsilon = g_0 \vec{B} \vec{\sigma}
+\ee
+where $g_0$ is bare Zeeman interaction constant.
+In this notations the bare spin splitting is $2 g_0$. 
+It is also the spin precession frequency.
+We will assume that $\vec{B} = \hat{z} B$.
+For the quasi-particles it is modified by the $g$-factor renormalization,
+$g_0 \rightarrow g$.
+\be\label{g}
+\delta \epsilon = g \vec{B}\vec{\sigma}\, , \quad g = g_0 /(1+G_0)
+\ee
+\be
+n = n_0 + [\partial_{\epsilon} n_0] ( g B \sigma ) + \delta n
+\ee
+Look for the solution in the form,
+\be
+\delta n = [\partial_{\epsilon} n_0] \vec{A} \vec{\sigma}
+\ee
+where the vector $\vec{A}$ is to be determined.
+We could also use an alternative form,
+\be
+\delta n_{\pm} = [\partial_{\epsilon} n_0] A \sigma_{\pm}\, ,
+\ee
+where $\sigma_{\pm} = \sigma_x \pm i \sigma_y$. 
+This will be done later as 
+\be
+[\sigma_z, \sigma_{\pm}] = \pm 2 \sigma_{\pm}
+\ee
+Kinetic equation for spatially isotropic solutions,
+\be
+\partial_t \delta n + i [ \epsilon, n] = 0
+\ee
+\be\label{comm}
+[\epsilon, n] = [\delta \tilde{\epsilon}, n_0 +  \partial_{\epsilon} n_0 ( g B \sigma )]+
+[g B \sigma,  \partial_{\epsilon} n_0 \sigma A]
+=
+[\delta \tilde{\epsilon},   \partial_{\epsilon} n_0 ( g B \sigma )]+
+[g B \sigma,  \partial_{\epsilon} n_0 \sigma A]
+\ee
+where 
+\be
+\delta \tilde{\epsilon} = \epsilon_p + g B \sigma + \sum f_{pp'} \delta n_{p'}
+=
+\epsilon_p + g B \sigma  +  Sp \sum f_{pp'} \partial_{\epsilon} n_0 \sigma A_{p'}
+=
+\epsilon_p + g B \sigma  - \sigma  \sum_{p'} G_{pp'} A_{p'}
+\ee
+And for isotropic solutions,
+\be
+\delta \tilde{\epsilon} =  -  G_{0}  \vec{A} \vec{\sigma}\, .
+\ee
+For the first term in \eqref{comm} we get
+\be
+[\delta \tilde{\epsilon},   \partial_{\epsilon} n_0 ( g B \sigma )] =
+[ -  G_{0}  \vec{A} \vec{\sigma},  \partial_{\epsilon} n_0 g \vec{B} \vec{\sigma} ]
+= 
+2 i  G_0 g [\partial_{\epsilon} n_0]  ( -\vec{A} \times \vec{B} )\vec{\sigma}
+=
+- 2 i \sigma G_0 \partial_{\epsilon} n_0 g ( \vec{A} \times \vec{B} )
+\ee
+where I used
+\be
+[\vec{\sigma} \vec{a}, \vec{\sigma} \vec{b} ] = 2 i \vec{\sigma} (\vec{a} \times \vec{b})\, .
+\ee
+The second term of \eqref{comm} gives
+%
+\be
+[g B \sigma,  \partial_{\epsilon} n_0 \sigma A] =2 g  [\partial_{\epsilon} n_0] 
+i \vec{B} \times \vec{A}
+\ee
+Combining the two terms we get for the equation of motion,
+\be
+\delta \dot{n} = \partial_{\epsilon} n_0 \sigma \dot{A} 
+=-i [\epsilon,n]= - 2  \sigma G_0 \partial_{\epsilon} n_0 g ( \vec{A} \times \vec{B} )
++
+2 g  [\partial_{\epsilon} n_0]  \vec{B} \times \vec{A}
+=
+2 (\vec{B} \times \vec{A}) \partial_{\epsilon} n_0 \sigma
+\left[ G_0 g + g \right]
+\ee
+And because of \eqref{g} we get a cancellation,
+\be
+\dot{A} 
+=
+2 g_0(\vec{B} \times \vec{A}) 
+\ee
+which is a non-interacting spin precession.

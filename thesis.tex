@@ -1,0 +1,103 @@
+\documentclass[letter,12pt]{report}
+\usepackage{titlesec}
+
+
+
+%\usepackage[utf8]{inputenc}
+
+% Import uithesisXX.sty file:
+
+%\documentclass[aps,onecolumn,prb,showpacs,superscriptaddress,groupaddress]{revtex4}
+
+
+%\usepackage{latexsym}
+%\usepackage[dvips]{graphicx}
+\usepackage{amsmath}
+%%\usepackage[mathcal]{eucal}
+%
+\usepackage[english]{babel}
+
+
+\usepackage{amssymb}
+%\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+%%\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{bbm}
+%\usepackage{epsfig}
+%\usepackage{array}
+%\usepackage{natbib}
+%\usepackage{xcolor}
+%\usepackage{eufrak}
+%\usepackage{appendix}
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\renewcommand{\bibname}{References}
+\usepackage{csquotes}
+%\usepackage{apacite}
+\addbibresource{thesis}
+%\titleformat{\chapter}[display]   
+%{\normalfont\LARGE\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Large}   
+%\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+
+	%\addto{\captionsenglish}{\renewcommand{\refname}{References}}
+	%\renewcommand{\bibname}{References}
+%\usepackage[nottoc,numbib]{tocbibind}
+\DeclareMathOperator{\sgn}{sgn}
+
+\usepackage[titles]{tocloft}
+
+\setlength\cftbeforechapskip{100pt}
+\renewcommand\cftfigafterpnum{\vskip10pt\par}
+%\renewcommand\cfttabafterpnum{\vskip5pt\par}
+\usepackage{uithesis03edited}
+
+% Specify which pieces (other .tex files) you plan to include later:
+\includeonly{
+prelude,
+newcom,
+chap1new1,
+chap2,
+chap3,
+chap4new,
+conclusions,
+app0new,
+app1,
+app2,
+app3,
+%bibliography
+}
+
+%\bibpunct{[}{]}{,\!}{n}{,}{,} 
+
+\begin{document}
+
+% Include all of the other pieces of your thesis:
+\include{prelude}
+\include{newcom}
+\include{chap1new1}
+\include{chap2}
+\include{chap3}
+\include{chap4new}
+\include{conclusions}
+\include{app0new}
+\include{app1}
+\include{app2}
+%\include{app3}
+%\include{bibliography}
+
+%bibliography
+\clearpage
+
+\printbibliography[title=REFERENCES]
+%\addcontentsline{toc}{category}{Bibliography}
+
+%\printbibliography[heading=bibintoc,title={References}]
+%\printbibliography[heading=bibnumbered,title={References}]
+%\addcontentsline{toc}{item}{Bibliography}
+%\addtocontents{toc}{\protect\vspace{\li}}
+		\addtocontents{toc}{\hspace{-32pt} }
+		\addcontentsline{toc}{head}{REFERENCES}
+%        \addtocontents{toc}{\protect\vspace{\li}} 
+
+\end{document}

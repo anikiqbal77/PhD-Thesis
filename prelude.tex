@@ -1,0 +1,122 @@
+% prelude.tex (specification of which features in `uithesisXX.sty' you
+% are using, your personal information, and your title & abstract)
+
+% Specify features of `uithesisXX.sty' you want to use:
+
+\abtitlepgfalse % special title page announcing your abstract, not to
+               % be bound with thesis (required)
+\abstractpgfalse % special version of your abstract suitable for
+                % microfilming, not to be bound with thesis (required)
+\titlepgtrue   % main title page (required)
+\copyrighttrue % copyright page (optional)
+\signaturepagetrue % page for thesis committee signatures (required)
+\dedicationtrue % dedication page (optional)
+\ackfalse % acknowledgments page (optional)
+\abswithesisfalse % abstract to be bound with thesis (optional)
+\tablecontentstrue % table of contents page (required)
+\tablespagefalse % table of contents page for tables (required only if you
+                % have tables)
+\figurespagetrue % table of contents page for figures (required only if
+                 % you have figures)
+
+\title{Collective phenomena in confined interacting systems} % use all capital letters
+
+\author{Anik Iqbal} % use mixed upper & lower case
+\advisor{Professor Michael Flatt\'e and Professor Maxim Khodas} % example:
+                                       % Associate Professor John Doe
+\dept{Physics} % your academic department
+\submitdate{December 2017} % month & year of your graduation
+
+
+\newcommand{\dedication}
+{ %This is optional; start with the word ``To''; you do not need to end with  a period 
+\begin{centering}
+%To my parents for the sacrifices they made to get me here, \\
+%to my wife Farjana for her continual love and support\\
+%and to my brother Asif for I love him dearly\\
+To my parents, my loving wife Farjana and my brother Asif
+\end{centering}
+	}
+
+% Take care of things in `uithesisXX.sty' behind the scenes (it sounds
+% weird, but you need these commands):
+\beforepreface
+
+\newpage
+	\pagestyle{plain}
+	\markboth{\thepage}{\thepage}
+        \doublespace
+\titleformat{\chapter}[display]   
+{\normalfont\large\bfseries\centering}{\chaptertitlename\ \thechapter}{10pt}{\large}   
+\titlespacing*{\chapter}{0pt}{-20pt}{25pt}
+\chapter*{ACKNOWLEDGMENTS}
+{ %This is also optional.  Use complete sentences here. 
+I thank Michael Flatt\'e for his supervision during the writing of my thesis. His feedbacks and guidance was invaluable for my successful completion of the program.
+
+I thank Maxim Khodas for his supervision and support throughout the process. As soon as I approached him almost 6 years ago, he immediately took me under his wing. He has always been generous with his time and help. He supervised all the three projects I have worked on during my graduate research experience. I also thank Alex Levchenko of University of Wisconsin-Madison for his contributions to my research. 
+
+I thank my thesis committee members for accommodating my schedule and providing useful suggestions during my comprehensive exam. I also thank Farjana Rashid for her support, encouragement and for believing in me.
+
+Part of this research was supported by NSF Grant No. DMR-1401908. I am also thankful to University of Iowa for their support.
+
+
+
+}
+
+
+
+\newpage
+	\pagestyle{plain}
+	\markboth{\thepage}{\thepage}
+        \doublespace
+\titleformat{\chapter}[display]   
+{\normalfont\large\bfseries\centering}{\chaptertitlename\ \thechapter}{10pt}{\large}   
+\titlespacing*{\chapter}{0pt}{-20pt}{25pt}
+\chapter*{ABSTRACT}
+% This is the abstract that I want bound with my thesis.  It's optional. 
+{
+Examples of resonant phenomena in varieties of macroscopic and microscopic systems are abundant in nature. These features are observable in a range of systems from ocean waves to Fermi and Bose gases in very sophisticated sate-of-the-art experiments. For past few decades, there have been a lot of developments in investigations of collective oscillations in semiconductor heterostructures, cold fermion and boson gases. In some cases theoretical predictions on the behavior of such oscillations predate the experimental evidences by decades, and in other cases there are still unexplained experimental results. In real experiments the system is always finite and confined by external forces which gives rise to many interesting behaviors and lately numerous theoretical works have also addressed the issue of confinement in such systems. This work addresses an important factor in theoretical considerations, namely the interparticle interactions. 
+
+In the first part of this thesis, I present a quantum-phenomenological calculation of the collective mode frequencies of a 1D interacting electron gas laterally confined by a parabolic potential under the influence of an external magnetic field, which will also be complemented by a perturbative solution. In the second part, I talk about the effect on finite non-parabolicity in the confinement potential. It will be showed that the collective oscillations of this nature are detuned by such irregularity and also that they have finite lifetime as opposed to the parabolic case. In the final part I discuss the collective modes in an interacting Bose-Einstein Condensate (BEC) coupled with its thermal cloud in a pancake-shaped confinement. The geometry is taken to be infinite in the radial direction and confined laterally with a parabolic potential. I will show how the coupled system behaves behaves in presence of interaction, and also how to incorporate non-parabolicty to the solution.
+
+
+}
+
+
+\newcommand{\abstracttext} %required
+{ 
+
+% Copy the abstract text into this field for generating additional abstract page
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%public abstract
+%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+	\pagestyle{plain}
+	\markboth{\thepage}{\thepage}
+        \doublespace
+\titleformat{\chapter}[display]   
+{\normalfont\large\bfseries\centering}{\chaptertitlename\ \thechapter}{10pt}{\large}   
+\titlespacing*{\chapter}{0pt}{-20pt}{25pt}
+\chapter*{PUBLIC ABSTRACT}
+{
+Resonant phenomena are quite common in nature. When a system (e.g. a swing) oscillates as a result of an external periodic force (e.g. someone giving it a light push intermittently), it can exhibit very high-amplitude or `violent' oscillations when the frequency of the external force hits some certain set of values. We call these values ``natural frequencies" of the system. These phenomena are very interesting to study and also give valuable insight to the solutions of modern-day science problems.
+
+Unsurprisingly, resonances are exhibited by not only mechanical systems like the swing or ocean waves, but also in technologically sophisticated systems like semiconductor devices and cold fermion and boson gases. It is of paramount importance to understand the behavior of the particles (i.e. electrons) that drive our semiconductor devices in order to advance the current human technologies. Lately, the behaviors very cold atoms in certain dilute gases have also caught the attention of the scientists because of their tremendous potential of being applicable in future technologies.
+
+One of the important steps in understanding the resonant phenomena in such systems is understanding the role of particle-particle interaction in the entire dynamics. When we ignore interactions, we assume that the microscopic particles that make up the system do not `see' each other. Although ignoring the interactions often give straightforward results, in certain situations they do not agree with experimentally observed results. Also, it is logically reasonable to investigate the effects of interparticle interactions in the collective oscillations in different systems.
+
+In first part of this thesis, I will discuss the effect of interaction in a 1-dimensional channel of electron gas (e.g. a semiconductor wire). To confine the particles in one dimension, we assume a lateral confinement of parabolic nature- as if the particle is trapped in a parabolic well along the width of the channel.
+
+In the second part, I will focus on the effects of non-parabolicity in such resonances. I will present a calculation that shows if the confinement is not perfectly parabolic in nature, the resonance frequencies are shifted and the oscillations are short-lived.
+
+In the third part, I will talk about the collective oscillations in a trapped Bose-Einstein condensate (BEC) coupled with its thermal cloud. A BEC is a dilute gas that has been cooled to such a low temperature that its quantum properties have been altered, namely, a large fraction of all the particles are settled in its lowest energy state. When BEC is coupled with a cloud of its vapor, it is free to exchange particles and energy with it. This part will discuss the oscillation modes that occur in such systems in presence of interaction, and also how they are affected by potential non-parabolicity.
+}
+
+
+
+
+
+\afterpreface

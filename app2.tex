@@ -1,0 +1,87 @@
+%paper 2
+\chapter{Hydrodynamic Relations}
+\section{Normal Modes}
+\label{App2}
+\setcounter{equation}{0}
+
+Here we derive the Eq. \eqref{normal-modes-eq} of the main text. In the parametrization \eqref{leading}, the left hand side of Eq.~\eqref{NS-eq} takes the form, 
+\begin{align}\label{LHS}
+\rho(\partial_t v+v\partial_zv) \approx \rho_0 \ddot{\phi}\, .
+\end{align}
+To linearize the right hand side of Eq.~\eqref{NS-eq} we note that the pressure is fixed by the density via the equation of state such that 
+\begin{align}
+P(z,t) = P[\rho(z,t)] \approx P[\rho_0(z)] - v_s^2[\rho_0(z)] (\rho_0 \phi)'\, ,
+\end{align}
+where the velocity $v_s$ is defined in Eq.~\eqref{v_s}.
+At equilibrium, Eq.~\eqref{NS-eq} yields 
+\begin{align}\label{cond}
+v_s^2 \rho_0' = -\rho_0 U'
+\end{align}
+We have therefore,
+\begin{align}
+-P'-\rho U' \approx 
+[ v_s^2 (\rho_0 \phi)']' +
+(\rho_0 \phi)' U'
+ \end{align}
+Writing $(\rho_0 \phi)' U' =[ \rho_0 \phi U']' - \rho_0 \phi U''$ and using \eqref{cond} we obtain,
+\begin{align}
+-P'-\rho U' \approx 
+[ v_s^2 \rho_0 \phi ']' 
+- (\rho_0 \phi) U''
+ \end{align}
+Writing 
+\begin{align*}
+[ v_s^2 \rho_0 \phi ']'  =\rho_0 [ v_s^2 \phi ']' +  \rho_0' [ v_s^2 \phi ']
+\end{align*}
+and using \eqref{cond} again we obtain
+\begin{align}\label{first}
+-P'-\rho U' \approx 
+\rho_0 [ v_s^2 \phi ']' -  
+\rho_0 \phi ' U'
+- \rho_0 \phi U''
+ \end{align}
+The third, viscosity term on the right hand side of Eq.~\eqref{NS-eq} reads
+\begin{align}\label{third}
+\partial_z(\eta\partial_z v) = [\eta \dot{\phi}']'
+\end{align}
+Substituting Eqs.~\eqref{LHS}, \eqref{first} and \eqref{third} in Eq.~\eqref{NS-eq} we obtain
+\begin{align}
+\ddot{\phi} = 
+[ v_s^2 \phi ']' -  
+ \phi ' U'
+- \phi U'' + \rho_0^{-1} [\eta \dot{\phi}']'
+\end{align}
+For the solutions of the form $\phi(z,t) = e^{i \omega t} \chi'(z)$ we obtain the equation,
+\begin{align}\label{interim}
+ - \omega^2 \chi' = 
+[ v_s^2 \chi'']' -  
+\chi'' U'
+- \chi' U'' +  (- i \omega)\rho_0^{-1} [\eta \chi'']'
+\end{align}
+Integration of Eq.~\eqref{interim} over $z$ yields Eq.~\eqref{normal-modes-eq}.
+
+\section{Speed of Sound in a Free Degenerate 2D Ideal Fermi Gas}
+
+At $T=0$ the free energy,
+\be
+F = E = V  \frac{  1}{ 4 \pi m}  \int_0^{p_F} d p p^3 = V  \frac{  1}{ 16 \pi m}  p_F^4
+\ee
+The density
+\be\label{n}
+n = \frac{p_F^2}{ 4 \pi}
+\ee
+so that 
+\be
+P = \frac{ \partial E }{ \partial V} = \pi n^2/m
+\ee
+\be
+v_s^2 = 2 \pi n /  m^2 = \frac{p_F^2}{2  m^2 } = v_F^2/2 
+\ee
+In the parabolic confinement,
+\be\label{hydro75}
+v_s^2(z) = \frac{1}{2} v_F^2(z) = \frac{1 }{ m } E_F(z) = 
+\frac{1}{m} (E_F - \frac{ k z^2 }{2} ) 
+=
+\frac{k}{ 2 m} (a^2 - z^2) = \frac{ \omega_{\perp}^2 }{2} (a^2 -z^2)
+\ee
+
